@@ -1,0 +1,11 @@
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\bin\Debug\IMH_Desktop.exe
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\bin\Debug\IMH_Desktop.pdb
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\MainWindow.baml
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\MainWindow.g.cs
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\App.g.cs
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop_MarkupCompile.cache
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.g.resources
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.Properties.Resources.resources
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.csproj.GenerateResource.Cache
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.exe
+C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.pdb
