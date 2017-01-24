@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="clases\Group.cs" />
     <Compile Include="clases\Issue.cs" />
     <Compile Include="clases\Machine.cs" />
     <Compile Include="clases\Repair.cs" />
@@ -76,6 +77,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="clases\WorkZone.cs" />
     <Compile Include="gui\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
