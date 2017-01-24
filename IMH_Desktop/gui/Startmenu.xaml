@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Startmenu" Height="300" Width="300">
     <Grid>
-        <TabControl Height="961" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="1178" SelectionChanged="tabControl1_SelectionChanged">
+        <TabControl Height="961" HorizontalAlignment="Left" Name="tabControl1" VerticalAlignment="Top" Width="1178">
             <TabItem>
                 <Image Height="452" Name="image1" Stretch="Fill" Width="1152" Source="/IMH_Desktop;component/Images/imh.png"  />
             </TabItem>

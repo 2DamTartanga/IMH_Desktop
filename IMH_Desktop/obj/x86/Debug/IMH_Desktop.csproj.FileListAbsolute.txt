@@ -1,7 +1,5 @@
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\bin\Debug\IMH_Desktop.exe
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\bin\Debug\IMH_Desktop.pdb
-C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\MainWindow.baml
-C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\MainWindow.g.cs
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\App.g.cs
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop_MarkupCompile.cache
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.g.resources
@@ -11,3 +9,9 @@ C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.exe
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.pdb
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Login.baml
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Login.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Adminmenu.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Startmenu.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Technicianmenu.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Adminmenu.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Startmenu.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Technicianmenu.g.cs

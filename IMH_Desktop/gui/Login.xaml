@@ -1,16 +1,16 @@
-﻿<Window x:Class="MenuInicio.Window1"
+﻿<Window x:Class="Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Login" Height="336" Width="361">
     <Grid>
-        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="48,254,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
-        <Button Content="Exit" Height="23" HorizontalAlignment="Left" Margin="207,254,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <Button Content="Login" Height="23" HorizontalAlignment="Left" Margin="48,254,0,0" Name="button1" VerticalAlignment="Top" Width="75"  />
+        <Button Content="Exit" Height="23" HorizontalAlignment="Left" Margin="207,254,0,0" Name="button2" VerticalAlignment="Top" Width="75"  />
         <Label Content="User:" Height="28" HorizontalAlignment="Left" Margin="69,98,0,0" Name="label1" VerticalAlignment="Top" />
         <Label Content="Password:" Height="28" HorizontalAlignment="Left" Margin="42,155,0,0" Name="label2" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="121,103,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="121,160,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
         <Image Height="75" HorizontalAlignment="Left" Margin="79,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="193" Source="/IMH_Desktop;component/Images/imh.png" />
-        <RadioButton Content="Euskera" Height="16" HorizontalAlignment="Left" Margin="79,208,0,0" Name="radioButton1" VerticalAlignment="Top" Checked="radioButton1_Checked" />
+        <RadioButton Content="Euskera" Height="16" HorizontalAlignment="Left" Margin="79,208,0,0" Name="radioButton1" VerticalAlignment="Top" />
         <RadioButton Content="English" Height="16" HorizontalAlignment="Left" Margin="207,208,0,0" Name="radioButton2" VerticalAlignment="Top" />
     </Grid>
 </Window>

@@ -20,7 +20,17 @@ namespace IMH_Desktop.gui
     {
         public Login()
         {
-            InitializeComponent();
+            //InitializeComponent();
+        }
+
+        private void textBox2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

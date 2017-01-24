@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\
 IMH_Desktop
 none
 false
 DEBUG;TRACE
-C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\App.xaml
-31214733003
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\App.xaml
+41313634287
 
-15-1923991599
+16176033053
 12-1381780322
-gui\Login.xaml;gui\Startmenu.xaml;MainWindow.xaml;
+gui\Adminmenu.xaml;gui\Login.xaml;gui\Startmenu.xaml;gui\Technicianmenu.xaml;
 
 False
 

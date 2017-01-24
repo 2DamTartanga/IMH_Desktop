@@ -61,6 +61,10 @@
     <Compile Include="clases\Repair.cs" />
     <Compile Include="clases\User.cs" />
     <Compile Include="clases\WorkOrder.cs" />
+    <Page Include="gui\Adminmenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="gui\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -69,7 +73,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="gui\Technicianmenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -78,15 +82,17 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="clases\WorkZone.cs" />
+    <Compile Include="gui\Adminmenu.xaml.cs">
+      <DependentUpon>Adminmenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\Startmenu.xaml.cs">
       <DependentUpon>Startmenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="gui\Technicianmenu.xaml.cs">
+      <DependentUpon>Technicianmenu.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
