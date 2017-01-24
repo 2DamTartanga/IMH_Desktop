@@ -1,4 +1,4 @@
-﻿<Window x:Class="Login"
+﻿<Window x:Class="IMH_Desktop.gui.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Login" Height="336" Width="361">
