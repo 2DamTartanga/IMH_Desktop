@@ -9,3 +9,5 @@ C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.Proper
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.csproj.GenerateResource.Cache
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.exe
 C:\Users\2DAM\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\IMH_Desktop.pdb
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Login.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Login.g.cs
