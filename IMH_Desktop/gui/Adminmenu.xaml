@@ -6,7 +6,7 @@
         <TabItem Width="50">
             <Image Height="452" Name="image1" Stretch="Fill" Width="1152" Source="/IMH_Desktop;component/Images/imh.png"  />
         </TabItem>
-        <TabItem Header="unai management" Name="tabItem1" FontSize="16" FontWeight="Bold" Width="285">
+        <TabItem Header="Students management" Name="tabItem1" FontSize="16" FontWeight="Bold" Width="285">
             <Grid Width="1200">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="268*" />
