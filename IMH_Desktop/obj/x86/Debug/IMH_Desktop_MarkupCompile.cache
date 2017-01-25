@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\App.xaml
-263184878
+71939914044
 
-13322156524
+18798283178
 12-1381780322
-gui\Login.xaml;gui\Startmenu.xaml;
+gui\Adminmenu.xaml;gui\Deletemachine.xaml;gui\Login.xaml;gui\Modifystudent.xaml;gui\Newmachine.xaml;gui\Startmenu.xaml;gui\Technicianmenu.xaml;
 
 False
 

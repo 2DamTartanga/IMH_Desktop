@@ -15,3 +15,9 @@ C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Technicianmenu
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Adminmenu.g.cs
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Startmenu.g.cs
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Technicianmenu.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Deletemachine.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Modifystudent.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Newmachine.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Deletemachine.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Modifystudent.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Newmachine.g.cs
