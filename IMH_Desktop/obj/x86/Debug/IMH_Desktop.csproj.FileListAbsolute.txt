@@ -21,3 +21,5 @@ C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Newmachine.bam
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Deletemachine.g.cs
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Modifystudent.g.cs
 C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Newmachine.g.cs
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Newstudent.baml
+C:\Users\2dam\Documents\IMH_Desktop\IMH_Desktop\obj\x86\Debug\gui\Newstudent.g.cs

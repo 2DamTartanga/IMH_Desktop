@@ -82,6 +82,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="gui\Newstudent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="gui\Startmenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +114,9 @@
     </Compile>
     <Compile Include="gui\Newmachine.xaml.cs">
       <DependentUpon>Newmachine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Newstudent.xaml.cs">
+      <DependentUpon>Newstudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\Startmenu.xaml.cs">
       <DependentUpon>Startmenu.xaml</DependentUpon>
@@ -142,10 +149,7 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="control" />
-    <Folder Include="control\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\imh.png" />
   </ItemGroup>
