@@ -1,0 +1,18 @@
+﻿<Window x:Class="IMH_Desktop.gui.Newmachine2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Newmachine2" Height="309" Width="455">
+    <Grid>
+        <TextBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="12,12,0,0" Name="textBox1" Text="MACHINE CODE:" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <TextBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="12,48,0,0" Name="textBox2" Text="SERIAL NUMBER:" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <TextBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="12,84,0,0" Name="textBox3" Text="SEVERITY:" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <TextBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="12,120,0,0" Name="textBox4" Text="SECTION ID:" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <TextBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="12,156,0,0" Name="textBox5" Text="TYPE ID:" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="150" />
+        <TextBox FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="168,12,0,0" Name="textBoxCode" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="250" />
+        <TextBox FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="168,48,0,0" Name="textBoxSerial" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="250" />
+        <TextBox FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="True" Margin="168,84,0,0" Name="textBoxSeverity" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="250" />
+        <Button Content="ADD NEW MACHINE" FontSize="14" FontWeight="Bold" Height="35" HorizontalAlignment="Left" Margin="140,210,0,0" Name="button1" VerticalAlignment="Top" Width="158" />
+        <ComboBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" Margin="168,120,0,0" Name="comboBoxSection" VerticalAlignment="Top" Width="250" />
+        <ComboBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" Margin="168,156,0,0" Name="comboBoxType" VerticalAlignment="Top" Width="250" />
+    </Grid>
+</Window>
