@@ -16,10 +16,10 @@ namespace IMH_Desktop.gui
     /// <summary>
     /// Lógica de interacción para Modifystuent.xaml
     /// </summary>
-    public partial class Modifystuent : Window
+    public partial class Modifystudent : Window
     {
 
-        public Modifystuent()
+        public Modifystudent()
         {
             InitializeComponent();
         }

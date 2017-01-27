@@ -5,9 +5,9 @@
     <Grid>
         
         <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="67,409,0,0" Name="buttonAddStudent" VerticalAlignment="Top" Width="75" Click="buttonAddStudent_Click" />
-        <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="217,409,0,0" Name="buttonClear" VerticalAlignment="Top" Width="75" Click="buttonClear_Click" />  
-        <RadioButton Content="General" Height="16" HorizontalAlignment="Left" Margin="50,114,0,0" Name="radioButtonGeneral" VerticalAlignment="Top" GroupName="grupo1" />
-        <RadioButton Content="Others" Height="16" HorizontalAlignment="Left" Margin="176,117,0,0" Name="radioButtonOtros" VerticalAlignment="Top" GroupName="grupo1" />
+        <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="217,409,0,0" Name="buttonClear" VerticalAlignment="Top" Width="75" Click="buttonClear_Click" />
+        <RadioButton Content="General" Height="16" HorizontalAlignment="Left" Margin="50,114,0,0" Name="radioButtonGeneral" VerticalAlignment="Top" GroupName="grupo1" IsChecked="True" Click="radioButtonGeneral_Click" />
+        <RadioButton Content="Others" Height="16" HorizontalAlignment="Left" Margin="176,117,0,0" Name="radioButtonOtros" VerticalAlignment="Top" GroupName="grupo1" IsChecked="False" Click="radioButtonOtros_Click" />
         
         <GroupBox Header="General" Height="103" HorizontalAlignment="Left" Margin="36,11,0,0" Name="groupBox1" VerticalAlignment="Top" Width="269">
             <Grid HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="260" Margin="0,0,-2,-12">
@@ -21,17 +21,17 @@
         <GroupBox Header="Others" Height="248" HorizontalAlignment="Left" Margin="38,139,0,0" Name="groupBox2" VerticalAlignment="Top" Width="364">
             <Grid HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="355" Margin="0,0,-2,-12">
                 <Label Content="Name: " Height="28" HorizontalAlignment="Left" Margin="13,10,0,0" Name="label1" VerticalAlignment="Top" />
-                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,12,0,0" Name="textBoxName" VerticalAlignment="Top" Width="120" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,12,0,0" Name="textBoxName" VerticalAlignment="Top" Width="120" IsReadOnly="False" IsEnabled="False" />
                 <Label Content="Surnames: " Height="28" HorizontalAlignment="Left" Margin="13,58,0,0" Name="label2" VerticalAlignment="Top" />
-                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,58,0,0" Name="textBoxSurname" VerticalAlignment="Top" Width="166" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,58,0,0" Name="textBoxSurname" VerticalAlignment="Top" Width="166" IsEnabled="False" />
                 <Label Content="Course: " Height="28" HorizontalAlignment="Left" Margin="13,92,0,0" Name="label3" VerticalAlignment="Top" />
-                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,94,0,0" Name="textBoxCourse" VerticalAlignment="Top" Width="120" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,94,0,0" Name="textBoxCourse" VerticalAlignment="Top" Width="120" IsEnabled="False" />
                 <Label Content="E-mail: " Height="28" HorizontalAlignment="Left" Margin="13,126,0,0" Name="label4" VerticalAlignment="Top" />
-                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,128,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="166" />
+                <TextBox Height="23" HorizontalAlignment="Left" Margin="117,128,0,0" Name="textBoxEmail" VerticalAlignment="Top" Width="166" IsEnabled="False" />
                 <Label Content="Type: " Height="28" HorizontalAlignment="Left" Margin="13,170,0,0" Name="label7" VerticalAlignment="Top" />
-                <RadioButton Content="Especial" Height="16" HorizontalAlignment="Left" Margin="97,176,0,0" Name="radioButton1" VerticalAlignment="Top" GroupName="grupo2" />
-                <RadioButton Content="Admin" Height="16" HorizontalAlignment="Left" Margin="179,176,0,0" Name="radioButton2" VerticalAlignment="Top" GroupName="grupo2" />
-                <RadioButton Content="Mantenimiento" Height="16" HorizontalAlignment="Left" Margin="256,176,0,0" Name="radioButton3" VerticalAlignment="Top" GroupName="grupo2" />
+                <RadioButton Content="Especial" Height="16" HorizontalAlignment="Left" Margin="97,176,0,0" Name="radioButtonEspecial" VerticalAlignment="Top" GroupName="grupo2" IsEnabled="False" />
+                <RadioButton Content="Admin" Height="16" HorizontalAlignment="Left" Margin="179,176,0,0" Name="radioButtonAdmin" VerticalAlignment="Top" GroupName="grupo2" IsEnabled="False" />
+                <RadioButton Content="Mantenimiento" Height="16" HorizontalAlignment="Left" Margin="256,176,0,0" Name="radioButtonManten" VerticalAlignment="Top" GroupName="grupo2" IsEnabled="False" />
             </Grid>
         </GroupBox>
     </Grid>

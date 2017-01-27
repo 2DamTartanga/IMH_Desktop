@@ -1,4 +1,4 @@
-﻿<Window x:Class="IMH_Desktop.gui.Modifystuent"
+﻿<Window x:Class="IMH_Desktop.gui.Modifystudent"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Modify Student" Height="438" Width="368" WindowStartupLocation="CenterScreen">
