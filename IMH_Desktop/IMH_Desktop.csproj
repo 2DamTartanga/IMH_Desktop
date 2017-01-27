@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="clases\WorkZone.cs" />
     <Compile Include="control\DBManager.cs" />
+    <Compile Include="control\Interface1.cs" />
     <Compile Include="gui\Adminmenu.xaml.cs">
       <DependentUpon>Adminmenu.xaml</DependentUpon>
     </Compile>
@@ -124,8 +125,15 @@
     <Compile Include="gui\Technicianmenu.xaml.cs">
       <DependentUpon>Technicianmenu.xaml</DependentUpon>
     </Compile>
+    <Page Include="gui\WorkshopMap.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="gui\WorkshopMap.xaml.cs">
+      <DependentUpon>WorkshopMap.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -21,7 +21,7 @@ namespace IMH_Desktop.gui
         public Newstudent()
         {
             InitializeComponent();
-            textBoxName.Focus();
+            textBoxNombreUser.Focus();
         }
 
         private void buttonAddStudent_Click(object sender, RoutedEventArgs e)
@@ -38,11 +38,44 @@ namespace IMH_Desktop.gui
 
         private void buttonClear_Click(object sender, RoutedEventArgs e)
         {
+            textBoxNombreUser.Clear();
+            passwordBox.Clear();
             textBoxName.Clear();
             textBoxSurname.Clear();
             textBoxEmail.Clear();
             textBoxCourse.Clear();
-            textBoxName.Focus();
+            textBoxNombreUser.Focus();
         }
+
+        
+
+        private void radioButtonGeneral_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxName.IsEnabled = false;
+            textBoxSurname.IsEnabled = false;
+            textBoxEmail.IsEnabled = false;
+            textBoxCourse.IsEnabled = false;
+            radioButtonEspecial.IsEnabled = false;
+            radioButtonAdmin.IsEnabled = false;
+            radioButtonManten.IsEnabled = false;
+            textBoxName.Clear();
+            textBoxSurname.Clear();
+            textBoxEmail.Clear();
+            textBoxCourse.Clear();
+        }
+
+        private void radioButtonOtros_Click(object sender, RoutedEventArgs e)
+        {
+            textBoxName.IsEnabled = true;
+            textBoxSurname.IsEnabled = true;
+            textBoxEmail.IsEnabled = true;
+            textBoxCourse.IsEnabled = true;
+            radioButtonEspecial.IsEnabled = true;
+            radioButtonAdmin.IsEnabled = true;
+            radioButtonManten.IsEnabled = true;
+        }
+
+
+        
     }
 }
