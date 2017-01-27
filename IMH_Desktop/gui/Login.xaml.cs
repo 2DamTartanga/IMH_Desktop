@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IMH_Desktop.control;
 
 namespace IMH_Desktop.gui
 {
@@ -18,13 +19,22 @@ namespace IMH_Desktop.gui
     /// </summary>
     public partial class Login : Window
     {
-
+        DBManager dbmanager= new DBManager()
+            ;
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             Boolean camposCorrectos= comprobarCampos();
             if (camposCorrectos) {
                 MessageBox.Show("Campos correctos");
-                comprobarUsuario();
+                Boolean control=dbmanager.comprobarDatos(txtBoxUser.Text,passwordBox.Password);
+                if (control)
+                {
+                    MessageBox.Show("Correcto");
+                }
+                else
+                {
+                    MessageBox.Show("Incorrecto");
+                }
             }
         }
 
@@ -43,6 +53,7 @@ namespace IMH_Desktop.gui
                 if (radioBtnEus.IsChecked == true || radioBtnEng.IsChecked == true)
                 {
                     bien = true;
+                    
                 }
                 else
                 {
@@ -60,23 +71,27 @@ namespace IMH_Desktop.gui
 
         private void comprobarUsuario() { 
             int tipoUsu=3;
-            //tipoUsu=manager.tipoUsuario(txtBoxUser.Text,passwordBox.Password);
-            if(tipoUsu==0){
-                MessageBox.Show("No existe el usuario introducido");
-            }
-            else if (tipoUsu == 1) {
-                MessageBox.Show("Eres admin");
-                Adminmenu window = new Adminmenu();
-                window.Show();
-            }
-            else if (tipoUsu == 2) {
-                MessageBox.Show("Eres tecnico");
-                Technicianmenu window = new Technicianmenu();
-                window.Show();
-            }
-            else if (tipoUsu == 3) {
-                Startmenu window = new Startmenu();
-                window.Show();
+            //tipoUsu=manager.tipoUsuario(txtBoxUser.Text,passwordBox.Password)
+ 
+            switch (tipoUsu) { 
+                case 1:
+                    MessageBox.Show("Eres admin");
+                    Adminmenu window = new Adminmenu();
+                    window.Show();
+                    break;
+                case 2:
+                    MessageBox.Show("Eres tecnico");
+                    Technicianmenu windowT = new Technicianmenu();
+                    windowT.Show();
+                    break;
+                case 3:
+                    Startmenu windowS = new Startmenu();
+                     windowS.Show();
+                    break;
+                default:
+                    MessageBox.Show("No existe el usuario introducido");
+                    break;
+            
             }
         }
 
