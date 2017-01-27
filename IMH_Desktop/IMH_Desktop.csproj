@@ -74,7 +74,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="gui\Modifystudent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="gui\Newmachine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="gui\Newstudent.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -102,8 +110,14 @@
     <Compile Include="gui\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="gui\Modifystudent.xaml.cs">
+      <DependentUpon>Modifystudent.xaml</DependentUpon>
+    </Compile>
     <Compile Include="gui\Newmachine.xaml.cs">
       <DependentUpon>Newmachine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Newstudent.xaml.cs">
+      <DependentUpon>Newstudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\Startmenu.xaml.cs">
       <DependentUpon>Startmenu.xaml</DependentUpon>
