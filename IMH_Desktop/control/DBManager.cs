@@ -7,7 +7,6 @@
  * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
  */
 using System;
-using MySql.Data;
 using MySql.Data.MySqlClient;
 
 namespace IMH_Desktop.control 
@@ -22,7 +21,7 @@ namespace IMH_Desktop.control
         MySqlCommand Query = new MySqlCommand();
         MySqlConnection Conexion = new MySqlConnection();
         MySqlDataReader consultar;
-        public string connData = "Server=10.22.82.173;Database=bdaimh;Uid=user;Pwd=user;";
+        public string connData = "Server=localhost;Database=bdaimh;Uid=user;Pwd=user;";
 		
         public DBManager()
 		{
@@ -43,8 +42,7 @@ namespace IMH_Desktop.control
         public Boolean comprobarDatos(string usu, string pass)
         {
             Boolean ok = false;
-            try
-            {
+           
                 conectar();
                 Query.CommandText = "SELECT count(*) FROM users where username like '" + usu + "' AND password like '" + pass + "'";
                 Query.Connection = Conexion;
@@ -55,14 +53,13 @@ namespace IMH_Desktop.control
                 }
 
                 Conexion.Close();
+                return ok;
             }
-            catch (MySqlException)
-            {
-                
-            }
+           
             
-            return ok;
-        }
+            
+	
+        
 
     }
 }
