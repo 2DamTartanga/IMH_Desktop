@@ -16,9 +16,9 @@ namespace IMH_Desktop.gui
     /// <summary>
     /// Lógica de interacción para Adminmenu.xaml
     /// </summary>
+   
     public partial class Adminmenu : Window
     {
-
         List<User> listUser = new List<User>();
 
         public Adminmenu()
@@ -61,8 +61,8 @@ namespace IMH_Desktop.gui
 
         private void buttonModifyStu_Click(object sender, RoutedEventArgs e)
         {
-            //Modifystudent student = new Modifystudent();
-            //student.Show();
+            Modifystudent student = new Modifystudent();
+            student.Show();
         }
 
         private void buttonDeleteStu_Click(object sender, RoutedEventArgs e)
