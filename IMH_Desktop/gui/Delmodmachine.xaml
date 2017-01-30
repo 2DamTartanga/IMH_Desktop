@@ -1,0 +1,19 @@
+﻿<Window x:Class="IMH_Desktop.Delmodmachine"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Delmodmachine" Height="309" Width="455">
+    <Grid>
+        <TextBox FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="False" IsReadOnly="True" Margin="168,12,0,0" Name="tbmachinecode" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="250" />
+        <TextBox FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="False" Margin="168,48,0,0" Name="tbserialnumber" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="250" />
+        <TextBox FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsEnabled="True" IsReadOnly="False" Margin="168,84,0,0" Name="tbseverity" VerticalAlignment="Top" VerticalContentAlignment="Center" Width="250" />
+        <Button Content="DELETE MACHINE" FontSize="14" FontWeight="Bold" Height="35" HorizontalAlignment="Left" Margin="12,210,0,0" Name="btndeletemachine" VerticalAlignment="Top" Width="158" Click="deletemachine_click" />
+        <Button Content="MODIFY MACHINE" FontSize="14" FontWeight="Bold" Height="35" HorizontalAlignment="Left" Margin="260,210,0,0" Name="btnmodifymachine" VerticalAlignment="Top" Width="158" Click="modifymachine_click" />
+        <ComboBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" Margin="171,120,0,0" Name="cbsectionid" VerticalAlignment="Top" Width="250" />
+        <ComboBox FontSize="11" FontWeight="Bold" Height="30" HorizontalAlignment="Left" Margin="171,156,0,0" Name="cbtypeid" VerticalAlignment="Top" Width="250" />
+        <Label Content="MACHINE CODE" FontSize="13" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="12,13,0,0" Name="lblmachinecode" VerticalAlignment="Top" Width="150" />
+        <Label Content="SERIAL NUMBER" FontSize="13" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="12,50,0,0" Name="lblserialnumber" VerticalAlignment="Top" Width="150" />
+        <Label Content="SEVERITY" FontSize="13" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="12,85,0,0" Name="lblseverity" VerticalAlignment="Top" Width="150" />
+        <Label Content="SECTION ID" FontSize="13" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="12,121,0,0" Name="lblsectionid" VerticalAlignment="Top" Width="150" />
+        <Label Content="TYPE ID" FontSize="13" FontWeight="Bold" Height="30" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="12,157,0,0" Name="lbltypeid" VerticalAlignment="Top" Width="150" />
+    </Grid>
+</Window>

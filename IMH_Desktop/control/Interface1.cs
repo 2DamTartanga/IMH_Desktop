@@ -10,5 +10,6 @@ namespace IMH_Desktop.control
         void conectar();
         void desconectar();
         Boolean comprobarDatos(String usu,String pass);
+        void añadirUsuario(User usuario);
     }
 }

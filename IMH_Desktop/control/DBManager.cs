@@ -8,6 +8,7 @@
  */
 using System;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace IMH_Desktop.control 
 {
@@ -36,7 +37,7 @@ namespace IMH_Desktop.control
 
         public void desconectar()
         {
-            
+            Conexion.Close();
         }
 
         public Boolean comprobarDatos(string usu, string pass)
@@ -47,6 +48,8 @@ namespace IMH_Desktop.control
                 Query.CommandText = "SELECT count(*) FROM users where username like '" + usu + "' AND password like '" + pass + "'";
                 Query.Connection = Conexion;
                 consultar = Query.ExecuteReader();
+                consultar.Read();
+
                 if (consultar.GetInt32(0) == 1)
                 {
                     ok = true;
@@ -55,11 +58,123 @@ namespace IMH_Desktop.control
                 Conexion.Close();
                 return ok;
             }
-           
-            
-            
-	
-        
+
+        public void añadirUsuario(User usuario)
+        {
+            conectar();
+            Query.CommandText = "INSERT into users VALUES ('"+usuario.Username+"','"+usuario.Password+"','"+usuario.TypeUser+"')";
+            Query.Connection = Conexion;
+            Query.ExecuteNonQuery();
+            desconectar();
+        }
+
+        public void añadirOtros(User usuario)
+        {
+            conectar();
+            Query.CommandText = "INSERT into others VALUES ('" + usuario.Username + "','" + usuario.Name + "','" + usuario.Surname + "','" + usuario.Email + "','" + usuario.Course + "','" + usuario.Type + "')";
+            Query.Connection = Conexion;
+            Query.ExecuteNonQuery();
+            desconectar();
+        }
+
+        public void borrarUser(User usuario)
+        {
+            conectar();
+            Query.CommandText = "DELETE from users where username like '" + usuario.Username + "'";
+            Query.Connection = Conexion;
+            Query.ExecuteNonQuery();
+            desconectar();
+        }
+
+        public void borrarOthers(User usuario)
+        {
+            conectar();
+            Query.CommandText = "DELETE from others where username like '" + usuario.Username + "'";
+            Query.Connection = Conexion;
+            Query.ExecuteNonQuery();
+            desconectar();
+        }
+
+        public List<User> getUsers()
+        {
+            List<User> listUser = new List<User>();
+            User aux = new User();
+            conectar();
+            Query.CommandText = "SELECT * FROM users";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+            while (consultar.Read())
+            {
+                aux = new User();
+                aux.Username = consultar["username"].ToString();
+                aux.Password = consultar["password"].ToString();
+                listUser.Add(aux);
+            }
+            desconectar();
+            return listUser;
+        }
+
+        public User getUser(String username)
+        {
+            User usuario = new User();
+            conectar();
+            Query.CommandText = "SELECT * FROM users where username like '" + username + "'";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+            while (consultar.Read())
+            {
+                usuario.Username = consultar["username"].ToString();
+                usuario.Password = consultar["password"].ToString();
+                usuario.TypeUser = consultar["type"].ToString();
+            }
+            desconectar();
+            return usuario;
+        }
+
+        public User getOthers(String username)
+        {
+            User usuario = new User();
+            conectar();
+            Query.CommandText = "SELECT * FROM others where username like '"+username+"'";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+            while (consultar.Read())
+            {
+                usuario.Username = consultar["username"].ToString();
+                usuario.Name = consultar["name"].ToString();
+                usuario.Surname = consultar["surname"].ToString();
+                usuario.Email = consultar["email"].ToString();
+                usuario.Course = consultar["course"].ToString();
+            }
+            desconectar();
+            return usuario;
+        }
+
+        public void modificarUser(User usuario)
+        {
+            conectar();
+            Query.CommandText = "UPDATE others set name='" + usuario.Name + "',surname='" + usuario.Surname + "',course='" + usuario.Course + "',email='" + usuario.Email + "' where username like '" + usuario.Username + "'";
+            Query.Connection = Conexion;
+            Query.ExecuteNonQuery();
+            desconectar();
+        }
+
+        public User cojerUser(String userName)
+        {
+            User usuario=new User();
+            conectar();
+            Query.CommandText = "SELECT type FROM users where username like '" + userName + "'";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+
+            if (consultar.Read())
+            {
+                usuario.TypeUser = consultar.GetString(0);
+            }
+
+            Conexion.Close();
+            return usuario;
+        }
 
     }
 }

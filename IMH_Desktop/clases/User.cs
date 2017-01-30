@@ -5,13 +5,17 @@ using System.Text;
 
 namespace IMH_Desktop
 {
-    class User
+    public class User
     {
         private String username;
         private String password;
         private String name;
         private String surname;
-        private Boolean super;
+        private String course;
+        private String email;
+        private int type;
+        private String typeUser;
+
 
         public String Username
         {
@@ -37,10 +41,28 @@ namespace IMH_Desktop
             set { surname = value; }
         }
 
-        public Boolean Super
+        public String Course
         {
-            get { return super; }
-            set { super = value; }
+            get { return course; }
+            set { course = value; }
+        }
+
+        public String Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
+
+        public int Type
+        {
+            get { return type; }
+            set { type = value; }
+        }
+
+        public String TypeUser
+        {
+            get { return typeUser; }
+            set { typeUser = value; }
         }
     }
 }

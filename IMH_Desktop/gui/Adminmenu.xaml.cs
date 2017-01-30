@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IMH_Desktop.control;
 
 namespace IMH_Desktop.gui
 {
@@ -19,7 +20,9 @@ namespace IMH_Desktop.gui
    
     public partial class Adminmenu : Window
     {
+        DBManager dbManager = new DBManager();
         List<User> listUser = new List<User>();
+        String id;
 
         public Adminmenu()
         {
@@ -30,13 +33,18 @@ namespace IMH_Desktop.gui
         }
 
         //PESTAÑA 1
-        private void llenarListBox(){
+        public void llenarListBox(){
             
-            //listUser = dbmanager.getEstudMante();   Coger todos los estudiantes de mantenimiento
+            listUser = dbManager.getUsers();   //Coger todos los usuarios
             for (int i = 0; i < listUser.Count; i++)
             {
-                listBoxStudents.Items.Add(listUser[i].Name + " " + listUser[i].Surname);
+                listBoxStudents.Items.Add(listUser[i].Username);
             }
+        }
+
+        public void vaciarListBox()
+        {
+            listBoxStudents.Items.Clear();
         }
 
         private void vaciarRichTextBox()
@@ -44,40 +52,159 @@ namespace IMH_Desktop.gui
             richTextBoxStuData.Document.Blocks.Clear();
         }
 
-        private void listBoxStudents_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            richTextBoxStuData.AppendText("Nombre: " + listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)].Name);
-            richTextBoxStuData.AppendText("\rApellido: " + listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)].Surname);
-            richTextBoxStuData.AppendText("\rCurso: " + listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)].Surname);
-            richTextBoxStuData.AppendText("\rEmail: " + listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)].Surname);
-            richTextBoxStuData.AppendText("\rNombre de usuario: " + listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)].Username);
-        }
 
         private void buttonNewStu_Click(object sender, RoutedEventArgs e)
         {
-            Newstudent student = new Newstudent();
+            listBoxStudents.UnselectAll();
+            vaciarRichTextBox();
+            Newstudent student = new Newstudent(this);
             student.Show();
         }
 
         private void buttonModifyStu_Click(object sender, RoutedEventArgs e)
         {
-            Modifystudent student = new Modifystudent();
-            student.Show();
+            User usuario = new User();
+            User usuario2 = new User();
+            usuario = listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)];
+            usuario2 = dbManager.getUser(usuario.Username);
+            usuario = dbManager.getOthers(usuario.Username);
+            usuario.TypeUser = usuario2.TypeUser;
+            if (usuario.TypeUser == "G")
+            {
+                MessageBox.Show("The user is General User");
+            }
+            else
+            {
+                Modifystudent student = new Modifystudent(usuario);
+                student.Show();
+            }
         }
 
         private void buttonDeleteStu_Click(object sender, RoutedEventArgs e)
         {
             User usuario = new User();
-            //usuario = listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)];
-            var result = MessageBox.Show("Do you want to delete the student?", "Delete student", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            usuario = listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)];
+            var result = MessageBox.Show("Do you want to delete the user?", "Delete user", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)
             {
-                //dbManager.borrarEstud(usuario);   Borrar el usuario de la base de datos
+                dbManager.borrarUser(usuario);   //Borrar el usuario de la base de datos
+                if (usuario.TypeUser != "G")
+                {
+                    dbManager.borrarOthers(usuario);   //Borrar el usuario de la base de datos
+                }
+                vaciarListBox();
+                llenarListBox();
+                vaciarRichTextBox();
             }
+        }
+
+        private void listBoxStudents_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            User usuario = new User();
+            User usuario2 = new User();
+            try
+            {
+                usuario = listUser[Convert.ToInt16(listBoxStudents.SelectedIndex)];
+                usuario2 = dbManager.getUser(usuario.Username);
+                usuario = dbManager.getOthers(usuario.Username);
+                usuario.TypeUser = usuario2.TypeUser;
+                vaciarRichTextBox();
+                if (usuario.TypeUser == "G")
+                {
+                    richTextBoxStuData.AppendText("Username: " + usuario2.Username);
+                    richTextBoxStuData.AppendText("\rType: General");
+                }
+                else
+                {
+                    richTextBoxStuData.AppendText("Username: " + usuario2.Username);
+                    richTextBoxStuData.AppendText("\rName: " + usuario.Name);
+                    richTextBoxStuData.AppendText("\rSurnames: " + usuario.Surname);
+                    richTextBoxStuData.AppendText("\rCourse: " + usuario.Course);
+                    richTextBoxStuData.AppendText("\rEmail: " + usuario.Email);
+                    if (usuario.TypeUser == "E")
+                        richTextBoxStuData.AppendText("\rType: Special");
+                    else if (usuario.TypeUser == "A")
+                        richTextBoxStuData.AppendText("\rType: Admin");
+                    else
+                        richTextBoxStuData.AppendText("\rType: Maintenance");
+                }
+            }
+            catch { }
             
+        }
+
+
+        //PESTAÑA 4
+        private void newmachine_Click(object sender, RoutedEventArgs e)
+        {
+            Newmachine2 nm2 = new Newmachine2();
+            nm2.Show();
+        }
+
+        private void sharpener_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbsharpener.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.Show();
+        }
+
+        private void bandsaws_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbbandsaws.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.Show();
+        }
+
+        private void drillingmachines_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbdrillingmachines.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.Show();
+        }
+
+        private void benchgrinders_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbbenchgrinders.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.code = id;
+            dmm.Show();
+        }
+
+        private void conventionallathes_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbconventionallathes.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.Show();
+        }
+
+        private void conventionalmillingmachines_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbconventionalmillingmachines.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.Show();
+        }
+
+        private void production_doubleclick(object sender, MouseButtonEventArgs e)
+        {
+            id = Convert.ToString(lbproduction.SelectedItem);
+            id = id.Substring(37);
+            Delmodmachine dmm = new Delmodmachine(id);
+            dmm.Show();
+        }
+
+        private void CargarMachines()
+        {
 
         }
+
+        
 
         
 

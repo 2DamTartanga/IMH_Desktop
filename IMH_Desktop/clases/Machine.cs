@@ -8,7 +8,7 @@ namespace IMH_Desktop
     class Machine
     {
         private String code;
-        private String type;
+        private int type;
         private String year;
         private String phoneNumber;
         private String model;
@@ -28,7 +28,9 @@ namespace IMH_Desktop
         private String fileSearch;
         private String workzoneId;
 
-        public Machine(String code, String type, String year, String phoneNumber, String model, String serialNumber, String manager, String electricConnection, Boolean pneumaticConnection, Boolean hidraulicSystem,
+        public Machine() { }
+
+        public Machine(String code, int type, String year, String phoneNumber, String model, String serialNumber, String manager, String electricConnection, Boolean pneumaticConnection, Boolean hidraulicSystem,
             String dimmensions, String powerSource, String weight, String typeOfOil, String workingPressure, int state, String manufacturer, String severity, String fileSearch, String workzoneId)
         {
             this.code = code;
@@ -59,7 +61,7 @@ namespace IMH_Desktop
             set { code = value; }
         }
 
-        public String Type
+        public int Type
         {
             get { return type; }
             set { type = value; }

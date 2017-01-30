@@ -10,6 +10,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IMH_Desktop.control;
+using IMH_Desktop.gui;
 
 namespace IMH_Desktop.gui
 {
@@ -18,22 +20,55 @@ namespace IMH_Desktop.gui
     /// </summary>
     public partial class Newstudent : Window
     {
-        public Newstudent()
+        DBManager dbManager = new DBManager();
+        Adminmenu admin2 = new Adminmenu();
+
+        public Newstudent(Adminmenu adminMenu)
         {
             InitializeComponent();
             textBoxNombreUser.Focus();
+            admin2 = adminMenu;
         }
 
         private void buttonAddStudent_Click(object sender, RoutedEventArgs e)
         {
             User usuario = new User();
+            usuario.Username = textBoxNombreUser.Text;
+            usuario.Password = passwordBox.Password;
             usuario.Name = textBoxName.Text;
             usuario.Surname = textBoxSurname.Text;
-            //meter email y curso ...
-            usuario.Super = false;
-            //dbManager.añadirEstud(usuario);   Añadir el usuario a la base de datos
-            MessageBox.Show("The student added correctly.");
+            usuario.Course = textBoxCourse.Text;
+            usuario.Email = textBoxEmail.Text;
+            
+            if (radioButtonEspecial.IsChecked == true)
+            {
+                usuario.Type = 1; //especial
+                usuario.TypeUser = "E";
+            }
+            if (radioButtonAdmin.IsChecked == true)
+            {
+                usuario.Type = 2; //admin
+                usuario.TypeUser = "A";
+            }
+            if (radioButtonManten.IsChecked == true)
+            {
+                usuario.Type = 3; //mantenimiento
+                usuario.TypeUser = "M";
+            }
+            if (radioButtonGeneral.IsChecked == true)
+            {
+                usuario.TypeUser = "G";
+            }
+            dbManager.añadirUsuario(usuario); // Añadir el usuario a la base de datos
+            
+            if (radioButtonOtros.IsChecked == true)
+            {
+                dbManager.añadirOtros(usuario); // Añadir los otros a la base de datos
+            }
+            MessageBox.Show("The user added correctly.");
             this.Close();
+            admin2.vaciarListBox();
+            admin2.llenarListBox();
         }
 
         private void buttonClear_Click(object sender, RoutedEventArgs e)
@@ -44,6 +79,9 @@ namespace IMH_Desktop.gui
             textBoxSurname.Clear();
             textBoxEmail.Clear();
             textBoxCourse.Clear();
+            radioButtonEspecial.IsChecked = false;
+            radioButtonAdmin.IsChecked = false;
+            radioButtonManten.IsChecked = false;
             textBoxNombreUser.Focus();
         }
 
@@ -62,6 +100,9 @@ namespace IMH_Desktop.gui
             textBoxSurname.Clear();
             textBoxEmail.Clear();
             textBoxCourse.Clear();
+            radioButtonEspecial.IsChecked = false;
+            radioButtonAdmin.IsChecked = false;
+            radioButtonManten.IsChecked = false;
         }
 
         private void radioButtonOtros_Click(object sender, RoutedEventArgs e)

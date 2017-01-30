@@ -29,7 +29,9 @@ namespace IMH_Desktop.gui
                 Boolean control=dbmanager.comprobarDatos(txtBoxUser.Text,passwordBox.Password);
                 if (control)
                 {
-                    MessageBox.Show("Correcto");
+                    User usu = dbmanager.cojerUser(txtBoxUser.Text);
+
+                    MessageBox.Show(usu.TypeUser);
                 }
                 else
                 {

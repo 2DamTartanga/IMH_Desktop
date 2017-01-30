@@ -10,6 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using IMH_Desktop.control;
 
 namespace IMH_Desktop.gui
 {
@@ -18,27 +19,41 @@ namespace IMH_Desktop.gui
     /// </summary>
     public partial class Modifystudent : Window
     {
+        DBManager dbManager = new DBManager();
+        User usuario;
 
-        public Modifystudent()
+        public Modifystudent(User user)
         {
             InitializeComponent();
+            usuario = user;
+            cargarDatos();
+        }
+
+        private void cargarDatos()
+        {
+            textBoxName.Text = usuario.Name;
+            textBoxSurname.Text = usuario.Surname;
+            textBoxEmail.Text = usuario.Email;
+            textBoxCourse.Text = usuario.Course;
         }
 
         private void buttonModify_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User();
-            user.Username = textBoxName.Text;
-            user.Surname = textBoxName.Text;
-            //user.Course = textBoxName.Text;
-            //user.Email = textBoxName.Text;
+            
+                User usuario2 = new User();
+                usuario2.Username = usuario.Username;
+                usuario2.Name = textBoxName.Text;
+                usuario2.Surname = textBoxSurname.Text;
+                usuario2.Email = textBoxEmail.Text;
+                usuario2.Course = textBoxCourse.Text;
+                dbManager.modificarUser(usuario2);
+                MessageBox.Show("The user modified correctly.");
+                this.Close();
         }
 
-        private void buttonClear_Click(object sender, RoutedEventArgs e)
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-            textBoxName.Text = "";
-            textBoxSurname.Text = "";
-            textBoxCourse.Text = "";
-            textBoxEmail.Text = "";
+            cargarDatos(); 
         }
     }
 }
