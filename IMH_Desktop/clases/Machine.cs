@@ -28,6 +28,8 @@ namespace IMH_Desktop
         private String fileSearch;
         private String workzoneId;
 
+        public Machine() { }
+
         public Machine(String code, String type, String year, String phoneNumber, String model, String serialNumber, String manager, String electricConnection, Boolean pneumaticConnection, Boolean hidraulicSystem,
             String dimmensions, String powerSource, String weight, String typeOfOil, String workingPressure, int state, String manufacturer, String severity, String fileSearch, String workzoneId)
         {
