@@ -13,8 +13,7 @@ namespace IMH_Desktop
         private String surname;
         private String course;
         private String email;
-        private int type;
-        private String typeUser;
+        private Char typeUser;
 
 
         public String Username
@@ -53,13 +52,7 @@ namespace IMH_Desktop
             set { email = value; }
         }
 
-        public int Type
-        {
-            get { return type; }
-            set { type = value; }
-        }
-
-        public String TypeUser
+       public Char TypeUser
         {
             get { return typeUser; }
             set { typeUser = value; }

@@ -71,7 +71,7 @@ namespace IMH_Desktop.control
         public void añadirOtros(User usuario)
         {
             conectar();
-            Query.CommandText = "INSERT into others VALUES ('" + usuario.Username + "','" + usuario.Name + "','" + usuario.Surname + "','" + usuario.Email + "','" + usuario.Course + "','" + usuario.Type + "')";
+            Query.CommandText = "INSERT into others VALUES ('" + usuario.Username + "','" + usuario.Name + "','" + usuario.Surname + "','" + usuario.Email + "','" + usuario.Course + "')";
             Query.Connection = Conexion;
             Query.ExecuteNonQuery();
             desconectar();
@@ -125,7 +125,7 @@ namespace IMH_Desktop.control
             {
                 usuario.Username = consultar["username"].ToString();
                 usuario.Password = consultar["password"].ToString();
-                usuario.TypeUser = consultar["type"].ToString();
+				usuario.TypeUser = (char)consultar["type"];
             }
             desconectar();
             return usuario;
@@ -169,7 +169,7 @@ namespace IMH_Desktop.control
 
             if (consultar.Read())
             {
-                usuario.TypeUser = consultar.GetString(0);
+            	usuario.TypeUser = consultar.GetChar(0);
             }
 
             Conexion.Close();

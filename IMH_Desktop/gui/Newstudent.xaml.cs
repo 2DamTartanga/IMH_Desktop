@@ -42,22 +42,19 @@ namespace IMH_Desktop.gui
             
             if (radioButtonEspecial.IsChecked == true)
             {
-                usuario.Type = 1; //especial
-                usuario.TypeUser = "E";
+                usuario.TypeUser = 'E';
             }
             if (radioButtonAdmin.IsChecked == true)
             {
-                usuario.Type = 2; //admin
-                usuario.TypeUser = "A";
+                usuario.TypeUser = 'A';
             }
             if (radioButtonManten.IsChecked == true)
             {
-                usuario.Type = 3; //mantenimiento
-                usuario.TypeUser = "M";
+                usuario.TypeUser = 'M';
             }
             if (radioButtonGeneral.IsChecked == true)
             {
-                usuario.TypeUser = "G";
+                usuario.TypeUser = 'G';
             }
             dbManager.añadirUsuario(usuario); // Añadir el usuario a la base de datos
             

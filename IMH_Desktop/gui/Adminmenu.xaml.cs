@@ -69,7 +69,7 @@ namespace IMH_Desktop.gui
             usuario2 = dbManager.getUser(usuario.Username);
             usuario = dbManager.getOthers(usuario.Username);
             usuario.TypeUser = usuario2.TypeUser;
-            if (usuario.TypeUser == "G")
+            if (usuario.TypeUser == 'G')
             {
                 MessageBox.Show("The user is General User");
             }
@@ -89,7 +89,7 @@ namespace IMH_Desktop.gui
             if (result == MessageBoxResult.Yes)
             {
                 dbManager.borrarUser(usuario);   //Borrar el usuario de la base de datos
-                if (usuario.TypeUser != "G")
+                if (usuario.TypeUser != 'G')
                 {
                     dbManager.borrarOthers(usuario);   //Borrar el usuario de la base de datos
                 }
@@ -110,7 +110,7 @@ namespace IMH_Desktop.gui
                 usuario = dbManager.getOthers(usuario.Username);
                 usuario.TypeUser = usuario2.TypeUser;
                 vaciarRichTextBox();
-                if (usuario.TypeUser == "G")
+                if (usuario.TypeUser == 'G')
                 {
                     richTextBoxStuData.AppendText("Username: " + usuario2.Username);
                     richTextBoxStuData.AppendText("\rType: General");
@@ -122,9 +122,9 @@ namespace IMH_Desktop.gui
                     richTextBoxStuData.AppendText("\rSurnames: " + usuario.Surname);
                     richTextBoxStuData.AppendText("\rCourse: " + usuario.Course);
                     richTextBoxStuData.AppendText("\rEmail: " + usuario.Email);
-                    if (usuario.TypeUser == "E")
+                    if (usuario.TypeUser == 'E')
                         richTextBoxStuData.AppendText("\rType: Special");
-                    else if (usuario.TypeUser == "A")
+                    else if (usuario.TypeUser == 'A')
                         richTextBoxStuData.AppendText("\rType: Admin");
                     else
                         richTextBoxStuData.AppendText("\rType: Maintenance");

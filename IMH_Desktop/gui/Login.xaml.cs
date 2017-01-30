@@ -19,8 +19,8 @@ namespace IMH_Desktop.gui
     /// </summary>
     public partial class Login : Window
     {
-        DBManager dbmanager= new DBManager()
-            ;
+    	DBManager dbmanager= new DBManager();
+    	User usu ;
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
             Boolean camposCorrectos= comprobarCampos();
@@ -29,9 +29,8 @@ namespace IMH_Desktop.gui
                 Boolean control=dbmanager.comprobarDatos(txtBoxUser.Text,passwordBox.Password);
                 if (control)
                 {
-                    User usu = dbmanager.cojerUser(txtBoxUser.Text);
+                    usu = dbmanager.cojerUser(txtBoxUser.Text);
 
-                    MessageBox.Show(usu.TypeUser);
                 }
                 else
                 {
@@ -72,25 +71,21 @@ namespace IMH_Desktop.gui
         }
 
         private void comprobarUsuario() { 
-            int tipoUsu=3;
+           // int tipoUsu=3;
             //tipoUsu=manager.tipoUsuario(txtBoxUser.Text,passwordBox.Password)
- 
-            switch (tipoUsu) { 
-                case 1:
+            Char type=usu.TypeUser;
+            switch (type) { 
+                case 'A':
                     MessageBox.Show("Eres admin");
                     Adminmenu window = new Adminmenu();
                     window.Show();
                     break;
-                case 2:
+                case 'T':
                     MessageBox.Show("Eres tecnico");
                     Technicianmenu windowT = new Technicianmenu();
                     windowT.Show();
                     break;
-                case 3:
-                    Startmenu windowS = new Startmenu();
-                     windowS.Show();
-                    break;
-                default:
+               	default:
                     MessageBox.Show("No existe el usuario introducido");
                     break;
             
