@@ -159,7 +159,7 @@ namespace IMH_Desktop.control
             desconectar();
         }
 
-        public User cojerUser(String userName)
+        public User cogerUser(String userName)
         {
             User usuario=new User();
             conectar();

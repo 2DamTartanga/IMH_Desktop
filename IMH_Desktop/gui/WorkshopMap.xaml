@@ -72,11 +72,11 @@
             <Grid />
         </GroupBox>
         <GroupBox Header="Conventional milling machines" Height="184" HorizontalAlignment="Left" Margin="736,268,0,0" Name="groupBox3" VerticalAlignment="Top" Width="199" FontWeight="Bold"></GroupBox>
-        <Grid Margin="736,288,55,212" />
-        <GroupBox Header="Conventional lathes" Height="184" HorizontalAlignment="Left" Margin="551,268,0,0" Name="groupBox4" VerticalAlignment="Top" Width="180" FontWeight="Bold">
+        <Grid Margin="742,284,49,215" />
+        <GroupBox Header="Conventional lathes" Height="184" HorizontalAlignment="Left" Margin="550,268,0,0" Name="groupBox4" VerticalAlignment="Top" Width="180" FontWeight="Bold">
             <Grid />
         </GroupBox>
-        <GroupBox Header="Didactic lathes" Height="112" HorizontalAlignment="Left" Margin="269,284,0,0" Name="groupBox5" VerticalAlignment="Top" Width="158" FontWeight="Bold">
+        <GroupBox Header="Didactic lathes" Height="112" HorizontalAlignment="Left" Margin="270,284,0,0" Name="groupBox5" VerticalAlignment="Top" Width="158" FontWeight="Bold">
             <Grid />
         </GroupBox>
         <GroupBox Header="Production" Height="181" HorizontalAlignment="Left" Margin="43,268,0,0" Name="groupBox6" VerticalAlignment="Top" Width="177" FontWeight="Bold">

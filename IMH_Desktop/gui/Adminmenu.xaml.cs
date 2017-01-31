@@ -37,7 +37,7 @@ namespace IMH_Desktop.gui
             
             listUser = dbManager.getUsers();   //Coger todos los usuarios
             foreach (User user in listUser){
-            	 listBoxStudents.Items.Add(listUser.Username);
+            	 //listBoxStudents.Items.Add(listUser.Username);
             }
         }
 
