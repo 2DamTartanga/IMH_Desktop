@@ -95,7 +95,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="gui\Startmenu.xaml">
+    <Page Include="gui\DirectionMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -134,8 +134,8 @@
     <Compile Include="gui\Newstudent.xaml.cs">
       <DependentUpon>Newstudent.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\Startmenu.xaml.cs">
-      <DependentUpon>Startmenu.xaml</DependentUpon>
+    <Compile Include="gui\DirectionMenu.xaml.cs">
+      <DependentUpon>DirectionMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\Technicianmenu.xaml.cs">
       <DependentUpon>Technicianmenu.xaml</DependentUpon>

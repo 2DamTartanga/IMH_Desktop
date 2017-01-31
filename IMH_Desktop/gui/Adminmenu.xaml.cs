@@ -36,9 +36,8 @@ namespace IMH_Desktop.gui
         public void llenarListBox(){
             
             listUser = dbManager.getUsers();   //Coger todos los usuarios
-            for (int i = 0; i < listUser.Count; i++)
-            {
-                listBoxStudents.Items.Add(listUser[i].Username);
+            foreach (User user in listUser){
+            	 listBoxStudents.Items.Add(listUser.Username);
             }
         }
 
