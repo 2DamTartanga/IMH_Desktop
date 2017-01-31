@@ -7,12 +7,18 @@ namespace IMH_Desktop
 {
     class Issue
     {
+    	private int codBreakdown;
         private String failureType;
         private DateTime date;
         private String subject;
         private String description;
-        private String severity;
+        private String equipmentAvailable;
 
+        public int CodBreakdown
+        {
+            get { return codBreakdown; }
+            set { codBreakdown = value; }
+        }
         public String FailureType
         {
             get { return failureType; }
@@ -41,10 +47,10 @@ namespace IMH_Desktop
         }
     
 
-        public String Severity
+        public String EquipmentAvailable
         {
-            get { return severity; }
-            set { severity = value; }
+            get { return equipmentAvailable; }
+            set { equipmentAvailable = value; }
         }
 
 
