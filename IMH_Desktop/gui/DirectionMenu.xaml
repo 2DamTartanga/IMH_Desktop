@@ -252,7 +252,8 @@
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="197,206,0,0" />
+						Margin="197,206,0,0"
+						x:Name="cmbSeverity" />
 					<ComboBox
 						Width="300"
 						Height="27"
