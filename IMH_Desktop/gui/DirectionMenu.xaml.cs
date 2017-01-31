@@ -21,6 +21,8 @@ namespace IMH_Desktop.gui
         public Startmenu()
         {
             InitializeComponent();
+            //Pestaña 1
+            
         }
     }
 }

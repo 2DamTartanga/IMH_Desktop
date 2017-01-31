@@ -2,15 +2,20 @@
 <Window
 	x:Class="IMH_Desktop.gui.Startmenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	Title="Startmenu"
-	Height="832"
-	Width="1200">
-	<Grid>
+	Width="1415"
+	Height="892">
+	<Grid
+		Width="1380"
+		Height="825">
 		<TabControl
-			Height="791"
-			HorizontalAlignment="Left"
 			Name="tabControl1"
+			Width="1380"
+			Height="817"
+			Grid.Column="0"
+			Grid.Row="0"
+			HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Width="1178">
+			Margin="0,0,0,0">
 			<TabItem>
 				<Image
 					Height="452"
@@ -26,15 +31,20 @@
 				Name="tabItem1">
 				<Grid
 					HorizontalAlignment="Stretch"
-					VerticalAlignment="Stretch">
+					VerticalAlignment="Stretch"
+					Width="1378"
+					Height="792">
 					<DataGrid
 						AutoGenerateColumns="False"
 						Height="683"
 						Name="dataGrid1"
 						Width="526"
-						Margin="10,46,0,0"
+						Grid.Column="0"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						HorizontalAlignment="Left">
+						Margin="6.99999999999994,51,0,0"
+						Grid.ColumnSpan="2">
 						<DataGrid.Columns>
 							<DataGridTextColumn
 								Binding="{Binding Path=Subject}"
@@ -67,17 +77,18 @@
 						Margin="10,10,0,0"
 						Name="label1"
 						VerticalAlignment="Top"
-						Width="290" />
+						Width="290"
+						Grid.ColumnSpan="2" />
 					<RichTextBox
 						Height="109"
 						Name="richTextBox1"
 						Width="300"
 						IsEnabled="False"
-						Grid.Column="1"
+						Grid.Column="3"
 						Grid.Row="0"
 						HorizontalAlignment="Right"
 						VerticalAlignment="Top"
-						Margin="0,242,74,0">
+						Margin="0,287,173,0">
 						<RichTextBox.Document>
 							<FlowDocument>
 								<Paragraph>Pedir recambio (placa metrica) y cambiar la palanca izquierda
@@ -91,25 +102,29 @@
 						HorizontalAlignment="Left"
 						Name="label2"
 						VerticalAlignment="Top"
-						Grid.Column="1"
-						Margin="307,10,0,0" />
+						Margin="307,10,0,0"
+						Grid.Column="3" />
 					<Label
 						Content="Available groups"
 						Height="41"
-						HorizontalAlignment="Left"
-						Margin="559,489,0,0"
 						Name="label3"
-						VerticalAlignment="Top"
 						Width="168"
-						Grid.ColumnSpan="2" />
-					<ListBox
-						Height="193"
+						Grid.Column="2"
+						Grid.ColumnSpan="2"
+						Grid.Row="0"
 						HorizontalAlignment="Left"
-						Margin="559,536,0,0"
-						Name="listBox1"
 						VerticalAlignment="Top"
-						Width="302"
-						Grid.ColumnSpan="2">
+						Margin="13,505,0,0" />
+					<ListBox
+						Name="listBox1"
+						Width="352"
+						Height="189"
+						Grid.Column="2"
+						Grid.ColumnSpan="2"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Margin="18.9999999999999,552,0,0">
 						<ListBoxItem
 							Content="T1" />
 						<ListBoxItem
@@ -122,86 +137,89 @@
 					<Button
 						Content="Create work order"
 						Height="97"
-						HorizontalAlignment="Left"
 						Name="button1"
-						VerticalAlignment="Top"
 						Width="206"
-						Grid.Column="1"
-						Margin="307,574,0,0" />
+						Grid.Column="3"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Margin="389,624,0,0" />
 					<Label
 						Content="Time:"
 						Height="34"
-						HorizontalAlignment="Left"
-						Margin="600,40,0,0"
 						Name="lbtime"
-						VerticalAlignment="Top"
 						Width="143"
-						Grid.ColumnSpan="2" />
+						Grid.Column="1"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Margin="320,46,0,0"
+						Grid.ColumnSpan="3" />
 					<Label
 						Content="Area:"
 						Height="39"
 						Name="lbarea"
 						Width="149"
-						Grid.Column="0"
-						Grid.ColumnSpan="2"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="596,103,0,0" />
+						Grid.Column="1"
+						Margin="320.487468758585,103,0,0"
+						Grid.ColumnSpan="3" />
 					<Label
 						Content="Group:"
 						Height="36"
 						Name="lbgroup"
 						Width="141"
-						Grid.Column="0"
-						Grid.ColumnSpan="2"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="596,72,0,0" />
+						Grid.Column="1"
+						Margin="320.487468758585,72,0,0"
+						Grid.ColumnSpan="3" />
 					<Label
 						Content="Machine:"
 						Height="39"
 						Name="lbmachine"
 						Width="149"
-						Grid.Column="0"
-						Grid.ColumnSpan="2"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="596,135,0,0" />
+						Grid.Column="1"
+						Margin="320.487468758585,135,0,0"
+						Grid.ColumnSpan="3" />
 					<Label
 						Content="Failure Type:"
 						Name="lbfailuretype"
 						Width="143"
-						Grid.Column="0"
-						Grid.ColumnSpan="2"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Stretch"
-						Margin="596,171,0,540" />
+						Grid.Column="1"
+						Margin="320.487468758585,171,0,540"
+						Grid.ColumnSpan="3" />
 					<Label
 						Height="39"
 						Name="lbequipment"
 						Width="143"
 						Content="Severity"
-						Grid.Column="0"
-						Grid.ColumnSpan="2"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="596,202,0,0" />
+						Grid.Column="1"
+						Margin="320.487468758585,202,0,0"
+						Grid.ColumnSpan="3" />
 					<Label
-						Content="Description:"
 						Height="36"
 						Name="lbdescripcion"
 						Width="151"
-						Grid.Column="0"
-						Grid.ColumnSpan="2"
+						Grid.Column="1"
+						Grid.ColumnSpan="3"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="596,236,0,0" />
+						Margin="322,279,0,0"
+						Content="Failure Description:" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
@@ -210,64 +228,116 @@
 						Width="300"
 						IsEnabled="False"
 						Text="21/09/2016"
-						Grid.Column="1"
-						Margin="197,42,0,0" />
+						Margin="197,42,0,0"
+						Grid.Column="3" />
 					<TextBox
 						Height="28"
 						Name="tbgroup"
 						Width="300"
 						IsEnabled="False"
 						Text="2TM"
-						Grid.Column="1"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="197,75,0,0" />
+						Margin="197,75,0,0"
+						Grid.Column="3" />
 					<TextBox
 						Height="28"
 						Name="tbarea"
 						Width="300"
 						IsEnabled="False"
 						Text="Conventional"
-						Grid.Column="1"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="198,108,0,0" />
+						Margin="198,108,0,0"
+						Grid.Column="3" />
 					<TextBox
 						Height="28"
 						Name="tbmachine"
 						IsEnabled="False"
 						Text="CRP-3"
 						Width="300"
-						Grid.Column="1"
 						Grid.Row="0"
 						HorizontalAlignment="Right"
 						VerticalAlignment="Top"
-						Margin="0,141,72,0" />
+						Margin="0,141,164,0"
+						Grid.Column="3" />
 					<ComboBox
 						Width="299"
 						Height="27"
-						Grid.Column="1"
+						x:Name="cmbSeverity"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
-						Margin="197,206,0,0"
-						x:Name="cmbSeverity" />
+						Margin="197,208,0,0"
+						Grid.Column="3" />
 					<ComboBox
 						Width="300"
 						Height="27"
-						Grid.Column="1"
 						Grid.Row="0"
 						HorizontalAlignment="Left"
 						VerticalAlignment="Top"
 						Margin="197,175,0,0"
-						x:Name="cmbFailure" />
+						x:Name="cmbFailure"
+						Grid.Column="3" />
+					<ComboBox
+						x:Name="cmbSeverity_Copy"
+						Width="297"
+						Height="29"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Margin="198,241,0,0"
+						Grid.Column="3" />
+					<Label
+						Height="36"
+						Width="151"
+						x:Name="lbdescripcion_Copy"
+						Grid.Column="1"
+						Grid.ColumnSpan="3"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Margin="322,396,0,0"
+						Content="Others:" />
+					<RichTextBox
+						Height="109"
+						Width="300"
+						IsEnabled="False"
+						x:Name="richTextBox1_Copy"
+						Grid.Column="3"
+						Grid.Row="0"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Top"
+						Margin="0,406,172,0">
+						<RichTextBox.Document>
+							<FlowDocument>
+								<Paragraph>Pedir recambio (placa metrica) y cambiar la palanca izquierda
+                                </Paragraph>
+							</FlowDocument>
+						</RichTextBox.Document>
+					</RichTextBox>
+					<Label
+						Height="36"
+						Width="151"
+						x:Name="lbdescripcion_Copy1"
+						Grid.Column="1"
+						Grid.ColumnSpan="3"
+						Grid.Row="0"
+						HorizontalAlignment="Left"
+						VerticalAlignment="Top"
+						Margin="322,238,0,0"
+						Content="Type of maintance:" />
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition
-							Width="0.514505119453925*" />
+							Width="0.201575158566484*" />
 						<ColumnDefinition
-							Width="0.485494880546075*" />
+							Width="0.238526968617779*" />
+						<ColumnDefinition
+							Width="0.0757019494907409*" />
+						<ColumnDefinition
+							Width="0.484197172347279*" />
 					</Grid.ColumnDefinitions>
 				</Grid>
 			</TabItem>
@@ -285,7 +355,8 @@
 						Margin="25,25,0,0"
 						Name="dataGrid2"
 						VerticalAlignment="Top"
-						Width="314">
+						Width="314"
+						Grid.ColumnSpan="3">
 						<DataGrid.Columns>
 							<DataGridTextColumn
 								Binding="{Binding Path=Subject}"
@@ -312,10 +383,11 @@
 						Content="Validate"
 						Height="79"
 						HorizontalAlignment="Left"
-						Margin="919,561,0,0"
 						Name="button2"
 						VerticalAlignment="Top"
-						Width="137" />
+						Width="137"
+						Margin="761.951785517501,561,0,0"
+						Grid.Column="2" />
 					<CheckBox
 						Content="Repaired"
 						Height="33"
@@ -323,15 +395,17 @@
 						Margin="25,697,0,0"
 						Name="checkBox1"
 						VerticalAlignment="Top"
-						Width="132" />
+						Width="132"
+						Grid.ColumnSpan="2" />
 					<CheckBox
 						Content="On hold"
 						Height="33"
 						HorizontalAlignment="Left"
-						Margin="301,697,0,0"
 						Name="checkBox2"
 						VerticalAlignment="Top"
-						Width="132" />
+						Width="132"
+						Margin="143.951785517501,697,0,0"
+						Grid.Column="2" />
 					<CheckBox
 						Content="Not repaired"
 						Height="33"
@@ -343,18 +417,21 @@
 					<ListView
 						Height="132"
 						HorizontalAlignment="Left"
-						Margin="613,508,0,0"
 						Name="listView1"
 						VerticalAlignment="Top"
-						Width="216" />
+						Width="216"
+						Margin="455.951785517501,508,0,0"
+						Grid.Column="2" />
 					<RichTextBox
 						Height="109"
-						HorizontalAlignment="Right"
 						IsEnabled="False"
-						Margin="0,326,55,0"
 						Name="rtbotdescription"
+						Width="300"
+						Grid.Row="0"
+						HorizontalAlignment="Right"
 						VerticalAlignment="Top"
-						Width="300">
+						Margin="0,337.5,259,0"
+						Grid.Column="2">
 						<RichTextBox.Document>
 							<FlowDocument>
 								<Paragraph>Pedir recambio (placa metrica) y cambiar la palanca izquierda</Paragraph>
@@ -365,142 +442,167 @@
 						Content="Details"
 						Height="28"
 						HorizontalAlignment="Left"
-						Margin="929,12,0,0"
 						Name="lbotdetails"
-						VerticalAlignment="Top" />
+						VerticalAlignment="Top"
+						Margin="771.951785517501,12,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Time:"
 						Height="34"
 						HorizontalAlignment="Left"
-						Margin="613,44,0,0"
 						Name="lbottime"
 						VerticalAlignment="Top"
-						Width="143" />
+						Width="143"
+						Margin="455.951785517501,44,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Name:"
 						Height="36"
 						HorizontalAlignment="Left"
-						Margin="613,84,0,0"
 						Name="lbotname"
 						VerticalAlignment="Top"
-						Width="141" />
+						Width="141"
+						Margin="455.951785517501,84,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Area:"
 						Height="39"
 						HorizontalAlignment="Left"
-						Margin="613,164,0,0"
 						Name="lbotarea"
 						VerticalAlignment="Top"
-						Width="149" />
+						Width="149"
+						Margin="455.951785517501,164,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Group:"
 						Height="36"
 						HorizontalAlignment="Left"
-						Margin="613,124,0,0"
 						Name="lbotgroup"
 						VerticalAlignment="Top"
-						Width="141" />
+						Width="141"
+						Margin="455.951785517501,124,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Machine:"
 						Height="30"
 						HorizontalAlignment="Left"
-						Margin="613,204,0,0"
 						Name="lbotmachine"
 						VerticalAlignment="Top"
-						Width="149" />
+						Width="149"
+						Margin="455.951785517501,204,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Failure Type:"
 						HorizontalAlignment="Left"
-						Margin="613,244,0,480"
 						Name="lbotfailuretype"
-						Width="143" />
+						Width="143"
+						Margin="455.951785517501,244,0,480"
+						Grid.Column="2" />
 					<Label
 						Content="Equipment:"
 						Height="39"
 						HorizontalAlignment="Left"
-						Margin="613,284,0,0"
 						Name="lbotequipment"
 						VerticalAlignment="Top"
-						Width="143" />
+						Width="143"
+						Margin="455.951785517501,284,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Description:"
 						Height="36"
 						HorizontalAlignment="Left"
-						Margin="613,324,0,0"
 						Name="lbotdescription"
 						VerticalAlignment="Top"
-						Width="151" />
+						Width="151"
+						Margin="455.951785517501,324,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,46,0,0"
 						Name="tbottime"
 						Text="21/09/2016"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,46,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,86,0,0"
 						Name="tbotname"
 						Text="Aitor Lopez"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,86,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,126,0,0"
 						Name="tbotgroup"
 						Text="2TM"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,126,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,166,0,0"
 						Name="tblolarea"
 						Text="Conventional"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,166,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,206,0,0"
 						Name="tbotmachine"
 						Text="CRP-3"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,206,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,246,0,0"
 						Name="tbotfailuretype"
 						Text="Mechanical"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,246,0,0"
+						Grid.Column="2" />
 					<TextBox
 						Height="28"
 						HorizontalAlignment="Left"
 						IsEnabled="False"
-						Margin="813,286,0,0"
 						Name="tbotequipment"
 						Text="Yes"
 						VerticalAlignment="Top"
-						Width="300" />
+						Width="300"
+						Margin="655.951785517501,286,0,0"
+						Grid.Column="2" />
 					<Label
 						Content="Available groups"
 						Height="41"
 						HorizontalAlignment="Left"
-						Margin="613,461,0,0"
 						Name="label6"
 						VerticalAlignment="Top"
-						Width="168" />
+						Width="168"
+						Margin="455.951785517501,461,0,0"
+						Grid.Column="2" />
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="0.0368071545828763*" />
+						<ColumnDefinition
+							Width="0.0774928559575157*" />
+						<ColumnDefinition
+							Width="0.885699989459608*" />
+					</Grid.ColumnDefinitions>
 				</Grid>
 			</TabItem>
 			<TabItem
