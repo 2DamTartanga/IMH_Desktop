@@ -6,10 +6,10 @@
         
         <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="67,409,0,0" Name="buttonAddStudent" VerticalAlignment="Top" Width="75" Click="buttonAddStudent_Click" />
         <Button Content="Clear" Height="23" HorizontalAlignment="Left" Margin="217,409,0,0" Name="buttonClear" VerticalAlignment="Top" Width="75" Click="buttonClear_Click" />
-        <RadioButton Content="General" Height="16" HorizontalAlignment="Left" Margin="50,114,0,0" Name="radioButtonGeneral" VerticalAlignment="Top" GroupName="grupo1" IsChecked="True" Click="radioButtonGeneral_Click" />
-        <RadioButton Content="Others" Height="16" HorizontalAlignment="Left" Margin="176,117,0,0" Name="radioButtonOtros" VerticalAlignment="Top" GroupName="grupo1" IsChecked="False" Click="radioButtonOtros_Click" />
+        <RadioButton Content="General" Height="16" HorizontalAlignment="Left" Margin="40,114,0,0" Name="radioButtonGeneral" VerticalAlignment="Top" GroupName="grupo1" IsChecked="True" Click="radioButtonGeneral_Click" />
+        <RadioButton Content="Others" Height="16" HorizontalAlignment="Left" Margin="166,117,0,0" Name="radioButtonOtros" VerticalAlignment="Top" GroupName="grupo1" IsChecked="False" Click="radioButtonOtros_Click" />
         
-        <GroupBox Header="General" Height="103" HorizontalAlignment="Left" Margin="36,11,0,0" Name="groupBox1" VerticalAlignment="Top" Width="269">
+        <GroupBox Header="General" Height="103" HorizontalAlignment="Left" Margin="26,11,0,0" Name="groupBox1" VerticalAlignment="Top" Width="269">
             <Grid HorizontalAlignment="Left" Height="82" VerticalAlignment="Top" Width="260" Margin="0,0,-2,-12">
                 <Label Content="Username: " Height="28" HorizontalAlignment="Left" Margin="8,6,0,0" Name="label5" VerticalAlignment="Top" />
                 <TextBox Height="23" HorizontalAlignment="Right" Margin="0,9,21,0" Name="textBoxNombreUser" VerticalAlignment="Top" Width="120" />
@@ -18,7 +18,7 @@
             </Grid>
             
         </GroupBox>
-        <GroupBox Header="Others" Height="248" HorizontalAlignment="Left" Margin="38,139,0,0" Name="groupBox2" VerticalAlignment="Top" Width="364">
+        <GroupBox Header="Others" Height="248" HorizontalAlignment="Left" Margin="28,139,0,0" Name="groupBox2" VerticalAlignment="Top" Width="364">
             <Grid HorizontalAlignment="Left" Height="228" VerticalAlignment="Top" Width="355" Margin="0,0,-2,-12">
                 <Label Content="Name: " Height="28" HorizontalAlignment="Left" Margin="13,10,0,0" Name="label1" VerticalAlignment="Top" />
                 <TextBox Height="23" HorizontalAlignment="Left" Margin="117,12,0,0" Name="textBoxName" VerticalAlignment="Top" Width="120" IsReadOnly="False" IsEnabled="False" />

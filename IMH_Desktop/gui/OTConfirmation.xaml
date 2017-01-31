@@ -64,22 +64,16 @@
 			Margin="170,226,0,0" />
 		<Button
 			Width="95"
-			Height="33"
-			Grid.Column="0"
-			Grid.Row="0"
-			HorizontalAlignment="Left"
+			Height="33" HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="125,543,0,0"
+			Margin="169,543,0,0"
 			Content="Accept" />
 		<Button
 			Width="95"
 			Height="33"
-			RenderTransformOrigin="0.4838,0.5197"
-			Grid.Column="0"
-			Grid.Row="0"
-			HorizontalAlignment="Left"
+			RenderTransformOrigin="0.4838,0.5197" HorizontalAlignment="Left"
 			VerticalAlignment="Top"
-			Margin="322,543,0,0"
+			Margin="375,543,0,0"
 			Content="Back" />
 		<Label
 			Height="36"
@@ -220,12 +214,9 @@
 		<RichTextBox
 			IsEnabled="False"
 			x:Name="richTextBox1_Copy1"
-			Width="300"
-			Grid.Column="0"
-			Grid.Row="0"
-			HorizontalAlignment="Right"
+			Width="300" HorizontalAlignment="Right"
 			VerticalAlignment="Stretch"
-			Margin="0,299,131,114">
+			Margin="0,297,119,116">
 			<RichTextBox.Document>
 				<FlowDocument>
 					<Paragraph>Pedir recambio (placa metrica) y cambiar la palanca izquierda
