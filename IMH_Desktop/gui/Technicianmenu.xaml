@@ -1,7 +1,7 @@
 ﻿<Window x:Class="IMH_Desktop.gui.Technicianmenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Technicianmenu" Height="560" Width="350">
+        Title="Technicianmenu" Height="560" Width="350" Loaded="Window_Loaded">
     <Grid>
         <Button Content="Save instructions PDF" Height="33" HorizontalAlignment="Left" Margin="12,474,0,0" Name="btnSave" VerticalAlignment="Top" Width="154" Click="btnSave_Click" />
         <Button Content="Close" Height="33" HorizontalAlignment="Left" Margin="204,474,0,0" Name="btnClose" VerticalAlignment="Top" Width="112" Click="btnClose_Click" />

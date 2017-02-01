@@ -159,11 +159,11 @@ namespace IMH_Desktop.control
             desconectar();
         }
 
-        public User cogerUser(String userName)
+        public User cojerUser(String username)
         {
             User usuario=new User();
             conectar();
-            Query.CommandText = "SELECT type FROM users where username like '" + userName + "'";
+            Query.CommandText = "SELECT type FROM users where username like '" + username + "'";
             Query.Connection = Conexion;
             consultar = Query.ExecuteReader();
 
@@ -176,5 +176,57 @@ namespace IMH_Desktop.control
             return usuario;
         }
 
+        public int getIdGroupOfUser(String username)
+        {
+            int idGroup;
+            conectar();
+            Query.CommandText = "SELECT idGroup FROM maintenance WHERE username like '" + username + "'";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+            consultar.Read();
+            idGroup = consultar.GetInt32(0);
+            desconectar();
+            return idGroup;
+        }
+
+        public int getCodBreakdownOfGroup(int idGroup)
+        {
+            int codBreakdown;
+            conectar();
+            Query.CommandText = "SELECT codBreakdown FROM repairs WHERE idGroup like '" + idGroup + "'";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+            consultar.Read();
+            codBreakdown = consultar.GetInt32(0);
+            desconectar();
+            return codBreakdown;
+        }
+
+        public List<WorkOrder> getWorkorderOfRepairs(int idBreakdown)
+        {
+            List<WorkOrder> worklist= new List<WorkOrder>();
+            WorkOrder workorder;
+            conectar();
+            Query.CommandText = "SELECT * FROM workorder WHERE idBreakdown like '" + idBreakdown + "'";
+            Query.Connection = Conexion;
+            consultar = Query.ExecuteReader();
+            while (consultar.Read())
+            {
+                workorder=new WorkOrder();
+                workorder.IdBreakdown = (Int32)consultar["idBreakdown"];
+                workorder.CreationDate = (DateTime)consultar["creationDate"];
+                worklist.Add(workorder);
+            }
+            desconectar();
+            return worklist;
+        }
+
+        public List<WorkOrder> getWorkorderOfUser(String username)
+        {
+            int idGroup = getIdGroupOfUser(username);
+            int codBreakdown = getCodBreakdownOfGroup(idGroup);
+            List<WorkOrder> worklist = getWorkorderOfRepairs(codBreakdown);
+            return worklist;
+        }
     }
 }

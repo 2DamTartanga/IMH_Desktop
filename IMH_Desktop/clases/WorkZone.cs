@@ -5,7 +5,7 @@ using System.Text;
 
 namespace IMH_Desktop
 {
-    class WorkZone
+    public class WorkZone
     {
         private String workZoneID;
         private String name;

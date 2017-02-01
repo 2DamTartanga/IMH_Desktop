@@ -75,10 +75,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="gui\Delmodmachine.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="gui\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -90,10 +86,6 @@
     <Page Include="gui\Newmachine.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="gui\Newmachine2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="gui\Newstudent.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -121,9 +113,6 @@
     <Compile Include="gui\Deletemachine.xaml.cs">
       <DependentUpon>Deletemachine.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gui\Delmodmachine.xaml.cs">
-      <DependentUpon>Delmodmachine.xaml</DependentUpon>
-    </Compile>
     <Compile Include="gui\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
@@ -132,9 +121,6 @@
     </Compile>
     <Compile Include="gui\Newmachine.xaml.cs">
       <DependentUpon>Newmachine.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="gui\Newmachine2.xaml.cs">
-      <DependentUpon>Newmachine2.xaml</DependentUpon>
     </Compile>
     <Compile Include="gui\Newstudent.xaml.cs">
       <DependentUpon>Newstudent.xaml</DependentUpon>

@@ -5,47 +5,42 @@ using System.Text;
 
 namespace IMH_Desktop
 {
-    class WorkOrder
+    public class WorkOrder
     {
-        private String workOrderId;
-        private int requiresTool;
-        private String instructions;
-        private Boolean validated;
-        private DateTime date;
+        private int idBreakdown;
+        private int severity;
+        private String others;
+        private int typeMaintenance;
+        private DateTime creationDate;
 
-        public String WorkOrderId
+        public int IdBreakdown
         {
-            get { return workOrderId; }
-            set { workOrderId = value; }
-        }
-       
-
-        public int RequiresTool
-        {
-            get { return requiresTool; }
-            set { requiresTool = value; }
-        }
-       
-
-        public String Instructions
-        {
-            get { return instructions; }
-            set { instructions = value; }
-        }
-       
-
-        public Boolean Validated
-        {
-            get { return validated; }
-            set { validated = value; }
-        }
-       
-
-        public DateTime Date
-        {
-            get { return date; }
-            set { date = value; }
+            get { return idBreakdown; }
+            set { idBreakdown = value; }
         }
 
+        public int Severity
+        {
+            get { return severity; }
+            set { severity = value; }
+        }
+
+        public String Others
+        {
+            get { return others; }
+            set { others = value; }
+        }
+
+        public int TypeMaintenance
+        {
+            get { return typeMaintenance; }
+            set { typeMaintenance = value; }
+        }
+
+        public DateTime CreationDate
+        {
+            get { return creationDate; }
+            set { creationDate = value; }
+        }
     }
 }
