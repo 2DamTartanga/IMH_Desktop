@@ -48,10 +48,5 @@ namespace IMH_Desktop.gui
         {
             this.Close();
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }
